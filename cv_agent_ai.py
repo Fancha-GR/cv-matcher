@@ -123,5 +123,6 @@ if submitted and uploaded_files and job_description:
                             reply = response.choices[0].message.content.strip()
                             st.info(f"GPT: {reply}")
 
-                    st.expander("📖 Δες περιεχόμενο βιογραφικού").write(content[:2000])
+                    st.expander("📖 Δες περιεχόμενο βιογραφικού").markdown(content[:2000].replace('\n', '  \n'))
+
                     break
