@@ -92,7 +92,7 @@ if submitted and uploaded_files and job_description:
                 export_data.append(row)
 
             df = pd.DataFrame(export_data)
-            csv = df.to_csv(index=False).encode('utf-8')
+            csv = df.to_csv(index=False).encode('utf-8-sig')
 
             st.download_button(
                 label="💾 Εξαγωγή αποτελεσμάτων σε CSV",
